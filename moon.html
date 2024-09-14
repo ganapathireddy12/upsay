@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your anger</title>
+	<style>
+		body {
+			background-image: url('https://www.sj-r.com/gcdn/authoring/2018/08/03/NSJR/ghows-LS-728b9292-698c-0a11-e053-0100007f85c2-e794881c.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp');
+			background-size: cover;
+			background-position: center;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			font-family: 'Open Sans', sans-serif; /* Added font family */
+		}
+		
+		.text-box {
+			background-color: rgba(255, 255, 255, 0.7); /* White background with 70% opacity */
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			max-width: 80%;
+		}
+		
+		h1 {
+			margin: 0;
+			color: #000000; /* Black text color */
+			font-weight: bold; /* Added font weight */
+			font-size: 24px; /* Added font size */
+		}
+		
+		p {
+			margin-bottom: 20px;
+			color: #000000; /* Black text color */
+			font-size: 18px; /* Added font size */
+		}
+		
+		.name {
+			font-weight: bold; /* Added font weight */
+		}
+		
+		.button-container {
+			margin-top: 20px;
+			text-align: center;
+		}
+		
+		.button {
+			background-color: #4CAF50;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.button:hover {
+			background-color: #3e8e41;
+		}
+		
+		/* Add media query for mobile devices */
+		@media only screen and (max-width: 768px) {
+			.text-box {
+				padding: 10px;
+				font-size: 16px;
+			}
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="text-box">
+		<h1>A Sincere Apology</h1>
+		<p>Dear <span class="name">Mahaaaa</span>,</p>
+        <p>You know that I have a 'slippery tongue,' but I promise that I will change my behavior one day.</p>
+        <p>I don't want to include personal details about Suresh; that's why I harshly said, "Give the mobile back."</p>
+        <p>I realize I spoke harshly, and I understand how it might have made you feel. I want to maintain a good friendship between us.</p>
+        <p>If you feel there's something wrong with me or if you think my behavior needs to change, please talk to me.</p>
+        <p>I would like us to communicate openly.</p>
+        
+        <p>Can you find it in your heart to forgive me?</p>
+		<p class="button-container">
+			<button class="button" id="yes-button">Yes</button>
+			<button class="button" id="no-button">No</button>
+		</p>
+		<p>Sincerely,</p>
+		<p><span class="name">GANAPATHI</span></p>
+
+	</div>
+	
+
+	
+    <script>
+        console.log('JavaScript code is being executed');
+        const yesButton = document.getElementById('yes-button');
+        const noButton = document.getElementById('no-button');
+        
+        yesButton.addEventListener('click', () => {
+          alert('Thank you for forgiving me!');
+        });
+        
+        noButton.addEventListener('click', () => {
+          alert('I understand.please think again.');
+        });
+      </script>
+</body>
+</html>

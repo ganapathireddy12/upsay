@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    height: 100svh;
+    width: 100svw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('galaxy2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.earth {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vmin; /* Increased size */
+    width: 30vmin; /* Increased size */
+    background-image: url('earth2.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.moon {
+    position: absolute;
+    height: 20vmin; /* Increased size */
+    width: 20vmin; /* Increased size */
+    border-radius: 50%;
+    background-image: url('moon2.png');
+    background-size: cover;
+    animation-name: moon-orbit;
+    animation-duration: 12.5s; /* Approximate lunar cycle */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    top: 50%;
+    left: 50%; /* Center the moon */
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.sun {
+    position: absolute;
+    height: 20vmin; /* Increased size */
+    width: 20vmin; /* Increased size */
+    border-radius: 50%;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_nQZZgHFmwzE4UFgc-g5lSanmVPuXg2opGrZ8MLrlNCp8V6hMAAOLWUynZtbD0a860KU&usqp=CAU');
+    background-size: cover;
+    animation-name: sun-orbit;
+    animation-duration: 12.5s; /* Same speed as moon */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    top: 50%;
+    left: 50%; /* Center the sun */
+    transform: translate(-50%, 50%) rotate(0deg);
+}
+
+@keyframes moon-orbit {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(50vmin); /* Increased orbit radius */
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(50vmin); /* Increased orbit radius */
+    }
+}
+
+@keyframes sun-orbit {
+    from {
+        transform: translate(-50%, 50%) rotate(0deg) translateX(-50vmin); /* Increased orbit radius */
+    }
+    to {
+        transform: translate(-50%, 50%) rotate(-360deg) translateX(-50vmin); /* Increased orbit radius */
+    }
+}
+/* Ensure the anchor tags fill the area of the divs */
+.link-container {
+    display: inline-block; /* Makes anchor tag fit around the div */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Optional: Ensure the divs are block-level for proper sizing */
+.moon, .sun {
+    display: block;
+}
+
+/* Make sure the clickable area of the divs extends to the entire element */
+.moon, .sun {
+    width: 100%; /* Full width of parent container */
+    height: 100%; /* Full height of parent container */
+}
